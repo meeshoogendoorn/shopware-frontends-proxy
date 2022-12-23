@@ -18,6 +18,7 @@ function createProxyMiddleware(options: Options, index?: number) {
 
 export interface ModuleOptions {
   proxy: boolean;
+  proxyDocuments: boolean;
   shopwareEndpoint: string;
   proxyDestinationEndpoint: string;
   shopwareAccessToken: string;
@@ -30,6 +31,7 @@ export default defineNuxtModule<ModuleOptions>({
   },
   defaults: {
     proxy: false,
+    proxyDocuments: true,
     proxyDestinationEndpoint: 'https://demo-frontends.shopware.store',
     shopwareEndpoint: 'http://localhost:3000',
     shopwareAccessToken: 'SWSCBHFSNTVMAWNZDNFKSHLAYW',
@@ -45,9 +47,8 @@ export default defineNuxtModule<ModuleOptions>({
           changeOrigin: true,
           pathRewrite: {
             '^/store-api': '/store-api',
-            '^/media': '/media',
           },
-          pathFilter: ['/store-api', '/media'],
+          pathFilter: ['/store-api'],
         },
       };
 
