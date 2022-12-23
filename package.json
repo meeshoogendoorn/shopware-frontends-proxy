@@ -22,6 +22,8 @@
     "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground"
   },
   "dependencies": {
+    "@nuxt/kit": "^3.0.0",
+    "http-proxy-middleware": "^2.0.6"
   },
   "devDependencies": {
     "@nuxt/module-builder": "^0.2.1",
@@ -30,7 +32,7 @@
     "eslint": "^8.29.0",
     "nuxt": "^3.0.0"
   },
-   "keywords": [
+  "keywords": [
     "nuxt3",
     "Shopware",
     "ShopwareFrontends",

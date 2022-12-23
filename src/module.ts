@@ -1,5 +1,5 @@
-import { fileURLToPath } from 'url';
-import { defineNuxtModule, addServerHandler, createResolver } from '@nuxt/kit';
+import { resolve } from 'path';
+import { defineNuxtModule, addServerHandler } from '@nuxt/kit';
 import type { Options } from 'http-proxy-middleware';
 
 function createProxyMiddleware(options: Options, index?: number) {
@@ -35,7 +35,7 @@ export default defineNuxtModule<ModuleOptions>({
   },
   setup(options, nuxt) {
     if (options.proxy && options.proxyDestinationEndpoint) {
-      const runtimeDir = fileURLToPath(new URL('./runtime', import.meta.url));
+      const runtimeDir = resolve(__dirname, './runtime');
       nuxt.options.build.transpile.push(runtimeDir);
 
       const config = {
