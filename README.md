@@ -6,6 +6,8 @@ Http Proxy Middleware for Shopware Frontends.
 ```npm install shopware-frontends-proxy```
 
 ## Usage
+### This will extend the `nuxt.options.shopware` which is also used by `shopware/frontends` as configuration.
+
 ```js
 // nuxt.config.ts
 
