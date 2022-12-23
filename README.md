@@ -11,7 +11,7 @@ Http Proxy Middleware for Shopware Frontends.
 
 export default defineNuxtConfig({
 
-    modules: ['shopware-frontends-proxy']
+    modules: ['shopware-frontends-proxy'],
 
     shopware: {
         shopwareEndpoint: 'YOUR_SHOPWARE_FRONTENDS_URL',
