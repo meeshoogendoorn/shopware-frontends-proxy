@@ -1,2 +1,6 @@
 {
+  "compilerOptions": {
+    "moduleResolution":"node",
+    "module": "esnext",
+  }
 }
