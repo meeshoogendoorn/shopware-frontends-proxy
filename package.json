@@ -1,7 +1,7 @@
 {
   "name": "shopware-frontends-proxy",
   "description": "This Shopware Frontends (nuxt3) module proxies requests to the Shopware 6 instance to bypass preflight requests.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "type": "module",
   "exports": {
